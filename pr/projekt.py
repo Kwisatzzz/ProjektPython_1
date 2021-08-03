@@ -55,6 +55,8 @@ for file in my_bucket:
     
     for result in response.results:
         
+        print(str(format(result.alternatives[0].transcript)))
+        
         wynik = format(result.alternatives[0].transcript)
         
         with open('pr/wyniki.csv', 'a', encoding='UTF8') as wyniki:
